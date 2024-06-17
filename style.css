@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: grey;
+}
+
+header {
+    background: honeydew;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+
+}
+
+nav {
+    background: orange;
+    flex-grow: 3;
+    padding-left: 5px;
+}
+
+main {
+    background: honeydew;
+    height: 82vh;
+    border-block: 1px solid black;
+    display: grid;
+}
+
+section {
+    background: darkgreen;
+    color: white;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+footer {
+    background: honeydew;
+    height: 10vh;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.logo {
+    background: orange;
+    flex-grow: 1;
+    padding-left: 5px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.presentation {
+    height: 20vh;
+
+}
+
+.services {
+    height: 15vh;
+}
+
+.galerie {
+    height: 25vh;
+}
+
+.contact {
+    height: 10vh;
+}
+
+@media screen and (min-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .presentation {
+        height: 50vh;
+    }
+
+    .services {
+        height: 25vh;
+    }
+
+    .galerie {
+        height: 65vh;
+    }
+
+    .contact {
+        height: 10vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .col {
+        flex-direction: column;
+    }
+
+    .presentation {
+        height: 15vh;
+    }
+
+    .services {
+        height: 18vh;
+        width: 60%;
+    }
+
+    .galerie {
+        height: 35vh;
+        width: 90%;
+    }
+
+    .contact {
+        height: 10vh;
+        width: 40%;
+    }
+}
